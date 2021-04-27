@@ -39,7 +39,7 @@ def lambda_handler(event, context):
         print ('KeyName :'+str(object_key))
         print ('Deleting object :'+str(object_key))
         # Delete the uploaded objects/ data from defined bucket
-        time.sleep(5)
+        #time.sleep(5)
         s3.delete_object(Bucket=bucket, Key=object_key)
         return response['ContentType']
     except Exception as err:
